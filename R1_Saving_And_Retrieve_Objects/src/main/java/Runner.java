@@ -3,6 +3,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import service.IUserService;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -22,8 +23,10 @@ public class Runner {
 
     private static void saveUser(IUserService userService) {
         User user = new User();
-        user.setId(3);
-        user.setName("First user name");
+        user.setId(1);
+        user.setName("User name");
+        user.setJoinedDate(new Date());
+        user.setDescription("Description");
 
         userService.saveUser(user);
     }
