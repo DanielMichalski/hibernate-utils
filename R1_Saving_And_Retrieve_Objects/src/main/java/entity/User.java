@@ -1,9 +1,7 @@
 package entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Author: Daniel
@@ -18,6 +16,13 @@ public class User {
 
     @Column(name = "name")
     private String name;
+
+    @Column(name = "joined_date")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date joinedDate;
+
+    @Column(name = "description")
+    private String description;
 
     public int getId() {
         return id;
@@ -35,11 +40,29 @@ public class User {
         this.name = name;
     }
 
+    public Date getJoinedDate() {
+        return joinedDate;
+    }
+
+    public void setJoinedDate(Date joinedDate) {
+        this.joinedDate = joinedDate;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("User{");
         sb.append("id=").append(id);
         sb.append(", name='").append(name).append('\'');
+        sb.append(", joinedDate=").append(joinedDate);
+        sb.append(", description='").append(description).append('\'');
         sb.append('}');
         return sb.toString();
     }
