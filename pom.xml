@@ -11,6 +11,9 @@
 
     <modules>
         <module>R1 - Saving and retriving objects</module>
+        <module>R2 - Embedding Objects</module>
+        <module>R3 - Saving Collections</module>
+        <module>R4 - Configuring Collections and Adding Keys</module>
     </modules>
 
     <dependencies>
