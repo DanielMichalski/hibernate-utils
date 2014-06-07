@@ -1,3 +1,4 @@
+import entity.Address;
 import entity.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -26,6 +27,13 @@ public class Runner {
         user.setName("User name");
         user.setJoinedDate(new Date());
         user.setDescription("Description");
+
+        Address address = new Address();
+        address.setStreet("street name");
+        address.setCity("city name");
+        address.setPincode("pincode");
+        address.setState("state name");
+        user.setAddress(address);
 
         userService.saveUser(user);
     }

@@ -11,6 +11,7 @@
 
     <modules>
         <module>R1_Saving_And_Retrieve_Objects</module>
+        <module>R2_Value_Types_and_Embedding_Objects</module>
     </modules>
 
     <properties>
