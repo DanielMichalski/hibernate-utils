@@ -1,9 +1,13 @@
 package entity;
 
-import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.*;
 import org.hibernate.annotations.CascadeType;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Author: Daniel
@@ -20,10 +24,12 @@ public class User {
     @Column(name = "name")
     private String name;
 
-    @OneToOne
-    @Cascade({CascadeType.ALL})
-    @JoinColumn(name = "vehicle_id")
-    private Vehicle vehicle;
+    @OneToMany
+    @JoinTable(name = "user_vehicle",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "vehicle_id"))
+    @Cascade(value = {CascadeType.ALL})
+    private Collection<Vehicle> vehicles = new ArrayList<Vehicle>();
 
     public int getId() {
         return id;
@@ -33,12 +39,12 @@ public class User {
         this.id = id;
     }
 
-    public Vehicle getVehicle() {
-        return vehicle;
+    public Collection<Vehicle> getVehicles() {
+        return vehicles;
     }
 
-    public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
+    public void setVehicles(Collection<Vehicle> vehicles) {
+        this.vehicles = vehicles;
     }
 
     public String getName() {
@@ -54,7 +60,7 @@ public class User {
         final StringBuilder sb = new StringBuilder("User{");
         sb.append("id=").append(id);
         sb.append(", name='").append(name).append('\'');
-        sb.append(", vehicle=").append(vehicle);
+        sb.append(", vehicles=").append(vehicles);
         sb.append('}');
         return sb.toString();
     }
