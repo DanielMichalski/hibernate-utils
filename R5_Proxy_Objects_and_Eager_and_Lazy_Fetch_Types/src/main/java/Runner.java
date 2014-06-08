@@ -11,16 +11,30 @@ import java.util.Set;
  * Author: Daniel
  */
 public class Runner {
+
+    private IUserService userService;
+
     public static void main(String[] args) {
+        new Runner();
+    }
+
+    public Runner() {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("context.xml");
 
-        IUserService userService = context.getBean("userService", IUserService.class);
+        userService = context.getBean("userService", IUserService.class);
 
-        saveUser(userService);
+        saveUser();
+        readUser();
     }
 
-    private static void saveUser(IUserService userService) {
+    private void readUser() {
+        User user = userService.get(1);
+        System.out.println(user);
+        System.out.println("addresses size: " + user.getAddresses().size());
+    }
+
+    private void saveUser() {
         User user = new User();
         user.setName("User name");
 
