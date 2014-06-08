@@ -4,6 +4,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import service.IUserService;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 /**
  * Author: Daniel
  */
@@ -29,9 +32,18 @@ public class Runner {
         User user = new User();
         user.setName("User name");
 
-        Vehicle vehicle = new Vehicle();
-        vehicle.setVehicleName("Car");
-        user.setVehicle(vehicle);
+        Vehicle vehicle1 = new Vehicle();
+        vehicle1.setVehicleName("Car");
+        vehicle1.setUser(user);
+
+        Vehicle vehicle2 = new Vehicle();
+        vehicle2.setVehicleName("Jeep");
+        vehicle2.setUser(user);
+
+        Collection<Vehicle> vehicles = new ArrayList<Vehicle>();
+        vehicles.add(vehicle1);
+        vehicles.add(vehicle2);
+        user.setVehicles(vehicles);
 
         userService.saveUser(user);
     }
