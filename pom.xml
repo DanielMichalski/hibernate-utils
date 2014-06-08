@@ -12,7 +12,11 @@
     <modules>
         <module>R1_Saving_And_Retrieve_Objects</module>
         <module>R2_Value_Types_and_Embedding_Objects</module>
+        <module>R3_Attribute_Overrides_and_Embedded_Objects</module>
+        <module>R4_Saving_Collections</module>
         <module>R5_Proxy_Objects_and_Eager_and_Lazy_Fetch_Types</module>
+        <module>R6_One_To_One_Mapping</module>
+        <module>R7_One_To_Many_Mapping</module>
     </modules>
 
     <properties>

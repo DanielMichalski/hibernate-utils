@@ -1,9 +1,5 @@
 package entity;
 
-import org.hibernate.annotations.CollectionId;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,14 +19,10 @@ public class User {
     @Column(name = "name")
     private String name;
 
-    @ElementCollection()
+    @ElementCollection(fetch = FetchType.EAGER)                   // Dane zostaną pobrane za pierwszym razem
     @JoinTable(name = "user_address",
             joinColumns = @JoinColumn(name = "user_id")
     )
-    @GenericGenerator(name = "hilo-gen", strategy = "hilo")       // generator klucza głównego
-    @CollectionId(columns = {@Column(name = "address_id")},       // nadaje klucz główny dla tabeli user_address
-            generator = "hilo-gen",
-            type = @Type(type = "long"))
     private Collection<Address> addresses = new ArrayList<Address>();   // ArrayList wspiera indexy
 
     public int getId() {
