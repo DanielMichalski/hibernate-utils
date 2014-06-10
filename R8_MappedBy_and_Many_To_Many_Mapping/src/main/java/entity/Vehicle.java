@@ -1,6 +1,8 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Author: Daniel
@@ -17,8 +19,8 @@ public class Vehicle {
     @Column(name = "vehicle_name")
     private String vehicleName;
 
-    @ManyToOne()
-    private User user;
+    @ManyToMany(mappedBy = "vehicles")
+    private Collection<User> users = new ArrayList<User>();
 
     public int getVehicleId() {
         return vehicleId;
@@ -36,12 +38,12 @@ public class Vehicle {
         this.vehicleName = vehicleName;
     }
 
-    public User getUser() {
-        return user;
+    public Collection<User> getUsers() {
+        return users;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUsers(Collection<User> users) {
+        this.users = users;
     }
 
     @Override

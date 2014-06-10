@@ -17,9 +17,6 @@ public class Vehicle {
     @Column(name = "vehicle_name")
     private String vehicleName;
 
-    @ManyToOne()
-    private User user;
-
     public int getVehicleId() {
         return vehicleId;
     }
@@ -34,14 +31,6 @@ public class Vehicle {
 
     public void setVehicleName(String vehicleName) {
         this.vehicleName = vehicleName;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     @Override
