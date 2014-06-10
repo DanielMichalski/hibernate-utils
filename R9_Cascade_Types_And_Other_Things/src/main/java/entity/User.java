@@ -1,11 +1,6 @@
 package entity;
 
-import org.hibernate.annotations.*;
-import org.hibernate.annotations.CascadeType;
-
 import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -24,11 +19,9 @@ public class User {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "user_vehicle",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "vehicle_id"))
-    @Cascade(value = {CascadeType.ALL})
+    @OneToMany(cascade = CascadeType.PERSIST,
+            fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
     private Collection<Vehicle> vehicles = new ArrayList<Vehicle>();
 
     public int getId() {

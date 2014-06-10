@@ -24,11 +24,8 @@ public class User {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "user_vehicle",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "vehicle_id"))
-    @Cascade(value = {CascadeType.ALL})
+    @ManyToMany(fetch = FetchType.EAGER)
+    @Cascade(CascadeType.ALL)
     private Collection<Vehicle> vehicles = new ArrayList<Vehicle>();
 
     public int getId() {
