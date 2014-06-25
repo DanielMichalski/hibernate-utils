@@ -22,6 +22,7 @@
         <module>R10_Implementing_Inheritance_With_One_Table</module>
         <module>R11_Impelemnting_Inheritance_With_Table_Per_Class_Strategy</module>
         <module>R12_Implementing_Inheritance_With_Joinded_Strategy</module>
+        <module>R13_Introducing_HQL)_and_the_Query_Object</module>
     </modules>
 
     <properties>
