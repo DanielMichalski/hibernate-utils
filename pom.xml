@@ -19,7 +19,9 @@
         <module>R7_One_To_Many_Mapping</module>
         <module>R8_MappedBy_and_Many_To_Many_Mapping</module>
         <module>R9_Cascade_Types_And_Other_Things</module>
-        <module>R10_Implementing_Inheritance</module>
+        <module>R10_Implementing_Inheritance_With_One_Table</module>
+        <module>R11_Impelemnting_Inheritance_With_Table_Per_Class_Strategy</module>
+        <module>R12_Implementing_Inheritance_With_Joinded_Strategy</module>
     </modules>
 
     <properties>

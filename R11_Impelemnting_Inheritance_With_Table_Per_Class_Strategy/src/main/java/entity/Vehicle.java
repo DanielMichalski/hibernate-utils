@@ -7,6 +7,8 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "Vehicle")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@DiscriminatorValue("vehicle")
 public class Vehicle {
 
     @Id
