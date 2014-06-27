@@ -28,8 +28,6 @@ public class UserDao implements IUserDao {
         return user;
     }
 
-
-
     @Override
     public void saveUser(User user) {
         Session session = sessionFactory.openSession();
