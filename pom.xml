@@ -20,7 +20,7 @@
         <module>R8_MappedBy_and_Many_To_Many_Mapping</module>
         <module>R9_Cascade_Types_And_Other_Things</module>
         <module>R10_Implementing_Inheritance_With_One_Table</module>
-        <module>R11_Implementing_Inheritance_With_Table_Per_Class_Strategy</module>
+        <module>R11_Impelemnting_Inheritance_With_Table_Per_Class_Strategy</module>
         <module>R12_Implementing_Inheritance_With_Joined_Strategy</module>
         <module>R13_Introducing_HQL_and_the_Query_Object</module>
         <module>R14_Select_And_Pagination_In_HQL</module>
@@ -29,7 +29,7 @@
 
     <properties>
         <spring.version>4.0.5.RELEASE</spring.version>
-        <hibernate.version>4.3.5.FINAL</hibernate.version>
+        <hibernate.version>4.3.5.Final</hibernate.version>
     </properties>
 
     <dependencies>
