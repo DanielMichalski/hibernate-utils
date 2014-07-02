@@ -31,10 +31,8 @@ public class Runner {
         sessionFactory = context.getBean(SessionFactory.class);
 
         saveUsers();
-//        readUsersUsingCriteria();
+        readUsersUsingCriteria();
         readUsersUsingCriteriaRestrictions();
-
-        // test
     }
 
     private void saveUsers() {
