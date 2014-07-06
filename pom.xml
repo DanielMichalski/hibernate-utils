@@ -26,7 +26,9 @@
         <module>R14_Select_And_Pagination_In_HQL</module>
         <module>R16_Criteria_API_And_Restrictions</module>
         <module>R17_Projections_and_query_by_example</module>
+        <module>R18_First_Level_Cache</module>
         <module>R19_Second_Level_Cache</module>
+        <module>R20_Using_Query_Cache</module>
     </modules>
 
     <properties>
