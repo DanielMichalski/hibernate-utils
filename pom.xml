@@ -26,6 +26,7 @@
         <module>R14_Select_And_Pagination_In_HQL</module>
         <module>R16_Criteria_API_And_Restrictions</module>
         <module>R17_Projections_and_query_by_example</module>
+        <module>R19_Second_Level_Cache</module>
     </modules>
 
     <properties>
@@ -63,6 +64,12 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.2-1002-jdbc4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-ehcache</artifactId>
+            <version>${hibernate.version}</version>
         </dependency>
 
     </dependencies>
