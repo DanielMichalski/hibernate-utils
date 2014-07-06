@@ -25,6 +25,7 @@
         <module>R13_Introducing_HQL_and_the_Query_Object</module>
         <module>R14_Select_And_Pagination_In_HQL</module>
         <module>R16_Criteria_API_And_Restrictions</module>
+        <module>R17_Projections_and_query_by_example</module>
     </modules>
 
     <properties>
