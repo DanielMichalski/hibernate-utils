@@ -10,9 +10,5 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>R17_Projections_and_query_by_example</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>../R18_Cacheing_in_Hibernate</module>
-    </modules>
 
 </project>
