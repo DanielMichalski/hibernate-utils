@@ -1,7 +1,7 @@
 hibernate-utils
 ===============
 
-This project contains spring examples:
+This project contains Hibernate examples:
 
 - Hibernate configuration
 - HQL queries
